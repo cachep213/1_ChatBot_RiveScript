@@ -1,0 +1,16 @@
+//chatbot's brain
+!version = 2.0
+//! var num = 4
+
++ hu
+- Guess a number between 0 and 100
+
+
++ set #
+- <set num=<star>>
+
++ #
+* <star> > <get num> => pick lower
+* <star> < <get num> => pick larger
+* <star> == <get num> => ok
+

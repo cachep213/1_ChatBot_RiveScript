@@ -1,5 +1,5 @@
 
-var data = [];
+var data = []; //[[1,2.1],[2,3.1],[3,4.1]];
 
 var m = 1;
 var b = 0;
@@ -53,8 +53,14 @@ function gradientDescent(){
 		b = b + error*learning_rate;
 	}
 
+ }
+function gradienttensor(){
+	var learning_rate = 0.05;
+for (var i = 0; i < 2001; i ++){
+
 }
 
+} 
 function drawLine(){
 	var x1 = 0;
 	var x2 = 1;
@@ -86,13 +92,18 @@ function draw(){
 	for(var i = 0; i < data.length; i++){
 		var x = map(data[i].x, 0, 1, 0, width);
 		var y = map(data[i].y, 0, 1, height, 0);
+		
 		fill(255);
 		stroke(255);
 		ellipse(x,y, 8,8 );
+		
 	}
 	if(data.length > 1){
 		gradientDescent();
 			drawLine();
 	}
-
+	//train 2000 time
+		
+		// gradienttensor();
+		// drawLine();
 }
